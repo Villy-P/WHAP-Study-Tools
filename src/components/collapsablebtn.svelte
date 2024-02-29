@@ -19,7 +19,7 @@
 </button>
 <div class="w-full overflow-hidden max-h-0 transition-all" bind:this={collapsed}>
     <p class="px-5 py-4">{desc}</p>
-    <button class="float-right mr-4 bg-sky-500 px-3 py-1 rounded-xl">
+    <button class="float-right mr-4 bg-sky-500 px-3 py-1 rounded-xl mb-4">
         <a class="w-full h-full" href={go}>Begin Test</a>
     </button>
 </div>
