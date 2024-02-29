@@ -7,7 +7,7 @@
     let collapsed: HTMLDivElement;
 
     function collapse() {
-        if (collapsed.style.maxHeight == "0px")
+        if (collapsed.style.maxHeight == "0px" || collapsed.style.maxHeight == "")
             collapsed.style.maxHeight = collapsed.scrollHeight + "px";
         else
             collapsed.style.maxHeight = "0px";
