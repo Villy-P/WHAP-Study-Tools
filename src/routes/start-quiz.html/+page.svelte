@@ -36,7 +36,7 @@
             <label for="time">{minutes === 200 ? "No Time Limit" : `${minutes} Minutes`}</label>
         </div>
         <button class="mr-4 bg-sky-500 px-3 py-1 rounded-xl mb-4">
-            <a class="w-full h-full" href="/">Start</a>
+            <a class="w-full h-full" href="/question.html">Start</a>
         </button>
     </div>
 </div>
