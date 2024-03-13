@@ -9,3 +9,4 @@
 <h1 class="font-bold text-3xl text-center py-6">Quick Quizzes</h1>
 <MenuButton title="By Unit" go="by-unit.html" backgroundImage=""/>
 <MenuButton title="By Topic" go="by-topic.html" backgroundImage=""/>
+<MenuButton title="Custom" go="custom.html" backgroundImage=""/>
