@@ -1,5 +1,18 @@
 <script lang="ts">
+    import { quickQuiz } from '$lib/stores/QuickQuizStore';
     import '../../app.css'
+
+    function formatTime(duration: number) {
+        const hrs = ~~(duration / 3600);
+        const mins = ~~((duration % 3600) / 60);
+        const secs = ~~duration % 60;
+        let ret = "";
+        if (hrs > 0)
+            ret += "" + hrs + ":" + (mins < 10 ? "0" : "");
+        ret += "" + mins + ":" + (secs < 10 ? "0" : "");
+        ret += "" + secs;
+        return ret;
+    }
 </script>
 
 <div class="flex w-full border-b-2 border-gray-600 h-12 items-center">
@@ -7,7 +20,7 @@
         <a href="/">Exit</a>
     </button>
     <p class="text-sm font-semibold ml-auto">12 / 30</p>
-    <p class="text-sm font-semibold mx-3">12:31</p>
+    <p class="text-sm font-semibold mx-3">{formatTime($quickQuiz.timeRemaining)}</p>
 </div>
 <div class="w-full h-screen flex items-center flex-col gap-1 pt-10">
     <div class="w-8/12 flex flex-col gap-3">

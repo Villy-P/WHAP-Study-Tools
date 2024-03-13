@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { quickQuiz } from '$lib/stores/QuickQuizStore';
     import '../../app.css'
 
     const options = [
@@ -16,6 +17,10 @@
 
     let questionCount: number = 20;
     let minutes: number = 20;
+
+    function startQuiz() {
+        $quickQuiz.timeRemaining = minutes * 60;
+    }
 </script>
 
 <div class="w-full h-screen flex justify-center items-center flex-col gap-1">
@@ -36,7 +41,7 @@
             <label for="time">{minutes === 200 ? "No Time Limit" : `${minutes} Minutes`}</label>
         </div>
         <button class="mr-4 bg-sky-500 px-3 py-1 rounded-xl mb-4">
-            <a class="w-full h-full" href="/question.html">Start</a>
+            <a class="w-full h-full" href="/question.html" on:click={() => startQuiz()}>Start</a>
         </button>
     </div>
 </div>
