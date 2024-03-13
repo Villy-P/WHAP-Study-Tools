@@ -5,3 +5,7 @@
 .border-1 {
     border-width: 1px;
 }
+
+.question-response {
+    @apply border-1 border-gray-400 py-2 px-3 w-full rounded-xl flex items-center cursor-pointer hover:bg-slate-100
+}
