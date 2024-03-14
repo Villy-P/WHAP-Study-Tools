@@ -1,5 +1,6 @@
 <script lang="ts">
     import { quickQuiz } from '$lib/stores/QuickQuizStore';
+    import { onMount } from 'svelte';
     import '../../app.css'
 
     function formatTime(duration: number) {
@@ -13,6 +14,12 @@
         ret += "" + secs;
         return ret;
     }
+
+    onMount(() => {
+        setInterval(() => {
+            $quickQuiz.timeRemaining--;
+        }, 1000)
+    });
 </script>
 
 <div class="flex w-full border-b-2 border-gray-600 h-12 items-center">
