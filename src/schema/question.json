@@ -1,0 +1,50 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "questions": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "question": {
+                        "type": "string",
+                        "markdownDescription": "The question to ask the user"
+                    },
+                    "passage-header": {
+                        "type": "string",
+                        "markdownDescription": "Header to accompany a passage (Optional)"
+                    },
+                    "passage": {
+                        "type": "string",
+                        "markdownDescription": "A passage that gives more context to the question. (Optional)"
+                    },
+                    "answers": {
+                        "type": "array",
+                        "minItems": 2,
+                        "markdownDescription":  "A list of all possible answers. Minimum of 2"
+                    },
+                    "answer": {
+                        "type": "number",
+                        "markdownDescription": "Index of the correct answer in the answers array. Starts at 0"
+                    },
+                    "unit": {
+                        "type": "number",
+                        "minimum": 1,
+                        "maximum": 9,
+                        "markdownDescription": "Unit that the question covers (There are [9 units](https://apstudents.collegeboard.org/courses/ap-world-history-modern))"
+                    },
+                    "subunit": {
+                        "type": "number",
+                        "markdownDescription": "Subunit of a specific unit. "
+                    },
+                    "topics": {
+                        "type": "array",
+                        "markdownDescription": "Array of topics that this question covers. Check other questions for formatting."
+                    }
+                }
+            },
+            "required": ["question", "answers", "answer", "unit", "subunit"]
+        }
+    }
+}

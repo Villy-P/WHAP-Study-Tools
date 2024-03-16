@@ -1,0 +1,8 @@
+{
+    "json.schemas": [
+        {
+            "fileMatch": ["questions.json"],
+            "url": "./src/schema/question.json"
+        }
+    ]
+}
