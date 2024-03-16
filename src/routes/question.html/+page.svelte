@@ -22,6 +22,7 @@
     });
 
     let questionWrapper: HTMLDivElement;
+    let hasSelectedQuestion = false;
 
     function clickAnswer(answer: EventTarget | null) {
         if (answer == null)
@@ -30,6 +31,7 @@
             question.classList.remove("bg-slate-200");
         const div = answer as HTMLDivElement;
         div.classList.add("bg-slate-200");
+        hasSelectedQuestion = true;
     }
 </script>
 
@@ -40,7 +42,7 @@
     <p class="text-sm font-semibold ml-auto">12 / 30</p>
     <p class="text-sm font-semibold mx-3">{formatTime($quickQuiz.timeRemaining)}</p>
 </div>
-<div class="w-full flex items-center flex-col gap-1 pt-10">
+<div class="w-full flex items-center flex-col gap-1 pt-10 pb-5">
     <div class="w-8/12 flex flex-col gap-3">
         <div class="w-full p-2">Musa I (also known as Mansa Musa) made a notable pilgrimage to Mecca and worked to spread Islam throughout his reign. This is an example of which of the following?</div>
         <div class="flex-grow overflow-auto flex">
@@ -52,5 +54,10 @@
             <button class="question-response" on:click={(e) => clickAnswer(e.target)}>Religious conflict between native African religions</button>
             <button class="question-response" on:click={(e) => clickAnswer(e.target)}>A sectarian split between Sunni and Shi’a in Africa</button>
         </div>
+        {#if hasSelectedQuestion}
+            <button class="flex justify-center items-center h-3/4 ml-auto mx-3 w-fit hover:bg-slate-100 p-2 rounded-lg text-sm text-blue-600 font-medium">
+                Check Answer
+            </button>
+        {/if}
     </div>
 </div>
