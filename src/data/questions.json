@@ -124,6 +124,21 @@
                 "industrial-revolution",
                 "factories"
             ]
+        },
+        {
+            "question": "The industrialization of Great Britain’s economy in the mid-eighteenth and early nineteenth centuries is most directly explained by which of the following?",
+            "answers": [
+                "Britain had large reserves of petroleum.",
+                "British scientists were the first to discover electricity.",
+                "Britain had large reserves of coal.",
+                "British engineers developed new methods of producing cheaper steel."
+            ],
+            "answer": 2,
+            "unit": 4,
+            "subunit": 8,
+            "topics": [
+                "industrial-revolution"
+            ]
         }
     ]
 }
