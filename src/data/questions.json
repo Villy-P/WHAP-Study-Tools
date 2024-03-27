@@ -106,6 +106,24 @@
                 "enlightenment",
                 "communism"
             ]
+        },
+        {
+            "question": "The emergence of the German industries referred to in the passage is most directly explained by which of the following processes in the nineteenth century?",
+            "passage_header": "Harold Baron, British historian, book describing the chemical industry of Europe, published in 1909",
+            "passage": "“By the end of the nineteenth century, Germany had advanced beyond Britain in terms of economic output. The prime reason for this development was that Germany developed newer industries, while Britain continued to stress textile production. Formerly an agricultural country, the German Empire has come to be regarded as one of the leading industrial nations of the world and, in the chemical industries, Germany has for some time occupied a leading place. One of the most successful chemical and pharmaceutical firms in Germany is the Bayer company. Bayer employs 3,500 people alone at its plant in Leverkusen, and the factory is so gigantic that all of these people are barely noticed when a visitor tours it. The laboratories are arranged very much in the same manner as the university laboratories in Britain. Each workstation receives a supply of electricity, compressed air, steam, and hot and cold water. The research chemists are paid a salary of about 100 British pounds for the first year. If a chemist has shown himself to be useful in his first year, he may receive a longer contract and may receive royalties on any processes that he invented.”",
+            "answers": [
+                "The spread of new industrial technologies such as the internal combustion engine from the United States",
+                "The development of new methods of production during the second industrial revolution",
+                "The greater diversity of manufactured goods produced by industrial factories",
+                "The growing importance of using coal as fuel in industrial production"
+            ],
+            "answer": 1,
+            "unit": 4,
+            "subunit": 8,
+            "topics": [
+                "industrial-revolution",
+                "factories"
+            ]
         }
     ]
 }
