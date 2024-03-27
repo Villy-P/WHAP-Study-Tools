@@ -11,7 +11,7 @@
                         "type": "string",
                         "markdownDescription": "The question to ask the user"
                     },
-                    "passage-header": {
+                    "passage_header": {
                         "type": "string",
                         "markdownDescription": "Header to accompany a passage (Optional)"
                     },
