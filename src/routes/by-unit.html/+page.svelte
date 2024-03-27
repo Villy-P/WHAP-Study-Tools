@@ -2,7 +2,7 @@
 	import CollapsableButton from './../../components/collapsablebtn.svelte';
     import BackButton from '../../components/backbtn.svelte';
 
-    import { units } from '../../data/units';
+    import { units } from '../../data/units.json';
 
     import '../../app.css'
 </script>

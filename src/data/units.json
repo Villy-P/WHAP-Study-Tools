@@ -1,9 +1,4 @@
-interface Unit {
-    name: string;
-    desc: string;
-}
-
-export const units: Unit[] = JSON.parse(`{
+{
     "units": [
         {
             "name": "The Global Tapestry",
@@ -34,4 +29,4 @@ export const units: Unit[] = JSON.parse(`{
             "desc": "A quiz about the causes and effects of the unprecedented connectivity of the modern world during the period c. 1900-present."
         }
     ]
-}`).units;
+}
