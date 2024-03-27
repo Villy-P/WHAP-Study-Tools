@@ -9,3 +9,11 @@
 .question-response {
     @apply border-1 border-gray-400 py-2 px-3 w-full rounded-xl flex items-center cursor-pointer hover:bg-slate-100 text-left
 }
+
+.check-ans-btn {
+    @apply flex justify-center items-center h-3/4 ml-auto mx-3 w-fit hover:bg-slate-100 p-2 rounded-lg text-sm text-blue-600 font-medium
+}
+
+.next-question-btn {
+    @apply flex justify-center items-center h-10 float-right shadow-2xl mr-5 mb-5 p-1
+}
