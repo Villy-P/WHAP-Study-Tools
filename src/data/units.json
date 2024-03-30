@@ -2,31 +2,40 @@
     "units": [
         {
             "name": "The Global Tapestry",
-            "desc": "A quiz on how states formed, expanded, and declined in areas of the world during the period c. 1200–c. 1450 and the related political, social, and cultural developments of that time."
+            "desc": "A quiz on how states formed, expanded, and declined in areas of the world during the period c. 1200–c. 1450 and the related political, social, and cultural developments of that time.",
+            "bgpath": "./assets/btn-bg/units/unit1.webp"
         }, {
             "name": "Networks of Exchange",
-            "desc": "A quiz on how areas of the world were linked through trade and how these connections affected people, cultures, and environments."
+            "desc": "A quiz on how areas of the world were linked through trade and how these connections affected people, cultures, and environments.",
+            "bgpath": "./assets/btn-bg/units/unit2.jpg"
         }, {
             "name": "Land-Based Empires",
-            "desc": "A quiz on the empires that held power over large contiguous areas of land in the time period c. 1450-c. 1750."
+            "desc": "A quiz on the empires that held power over large contiguous areas of land in the time period c. 1450-c. 1750.",
+            "bgpath": "./assets/btn-bg/units/unit3.jpg"
         }, {
             "name": "Transoceanic Interconnections",
-            "desc": "A quiz about advances in ocean exploration, the development of new maritime empires, and the effects of new cross-cultural encounters during the time period c. 1450-c. 1750."
+            "desc": "A quiz about advances in ocean exploration, the development of new maritime empires, and the effects of new cross-cultural encounters during the time period c. 1450-c. 1750.",
+            "bgpath": "./assets/btn-bg/units/unit4.webp"
         }, {
             "name": "Revolutions",
-            "desc": "A quiz about the period c. 1750–c. 1900, where new political ideas and developments in technology led to large-scale changes in governments, society, and economies."
+            "desc": "A quiz about the period c. 1750–c. 1900, where new political ideas and developments in technology led to large-scale changes in governments, society, and economies.",
+            "bgpath": "./assets/btn-bg/units/unit5.jpg"
         }, {
             "name": "Consequences of Industrialization",
-            "desc": "A quiz about learning how different states acquired and expanded control over colonies and territories during the period c. 1750-c. 1900."
+            "desc": "A quiz about learning how different states acquired and expanded control over colonies and territories during the period c. 1750-c. 1900.",
+            "bgpath": "./assets/btn-bg/units/unit6.webp"
         }, {
             "name": "Global Conflict",
-            "desc": "A quiz about the global conflicts that dominated the 1900's to the present."
+            "desc": "A quiz about the global conflicts that dominated the 1900's to the present.",
+            "bgpath": "./assets/btn-bg/units/unit7.webp"
         }, {
             "name": "Cold War and Decolonization",
-            "desc": "A quiz about colonies’ pursuits of independence and the global power struggle between capitalism and communism during the period c. 1900-present."
+            "desc": "A quiz about colonies’ pursuits of independence and the global power struggle between capitalism and communism during the period c. 1900-present.",
+            "bgpath": "./assets/btn-bg/units/unit8.jpg"
         }, {
             "name": "Globalization",
-            "desc": "A quiz about the causes and effects of the unprecedented connectivity of the modern world during the period c. 1900-present."
+            "desc": "A quiz about the causes and effects of the unprecedented connectivity of the modern world during the period c. 1900-present.",
+            "bgpath": "./assets/btn-bg/units/unit9.png"
         }
     ]
 }
