@@ -1,6 +1,6 @@
 <script lang="ts">
     import { quickQuiz } from '$lib/stores/QuickQuizStore';
-    import { questions } from '../../data/questions.json';
+    import { questions } from '../../data/questions';
     import '../../app.css'
 
     const options = [

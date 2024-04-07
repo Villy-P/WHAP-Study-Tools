@@ -2,7 +2,7 @@
     import { quickQuiz } from '$lib/stores/QuickQuizStore';
     import { onMount } from 'svelte';
     import { formatTime } from '../../utilities/time';
-    import { questions } from '../../data/questions.json';
+    import { questions } from '../../data/questions';
     import type { Question } from '../../data/types';
     import '../../app.css'
     import { shuffleArray } from '../../utilities/random';
