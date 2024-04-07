@@ -41,6 +41,10 @@
                     "topics": {
                         "type": "array",
                         "markdownDescription": "Array of topics that this question covers. Check other questions for formatting."
+                    },
+                    "image_link": {
+                        "type": "string",
+                        "markdownDescription": "Link to the image, optional"
                     }
                 }
             },

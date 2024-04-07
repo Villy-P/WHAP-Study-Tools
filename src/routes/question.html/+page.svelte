@@ -62,9 +62,11 @@
                 <div class="w-full p-2 pb-0">{currentQuestion.passage_header}</div>
                 <div class="w-full p-2 pt-0">{currentQuestion.passage}</div>
             {/if}
-            <!-- <div class="flex-grow overflow-auto flex">
-                <img class="w-96" alt="data" src="https://wpapp.kaptest.com/study/wp-content/uploads/West_African_Trade_Routes___APWHM.png"/>
-            </div> -->
+            {#if currentQuestion.image_link}
+                <div class="flex-grow overflow-auto flex">
+                    <img class="w-96" alt="data" src={currentQuestion.image_link}/>
+                </div>
+            {/if}
             <div class="w-full flex flex-col gap-2" bind:this={questionWrapper}>
                 {#each currentQuestion.answers as answer, index}
                     <button class="question-response" on:click={(e) => clickAnswer(e.target, index)}>{answer}</button>

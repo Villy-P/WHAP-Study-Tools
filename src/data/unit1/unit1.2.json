@@ -1,0 +1,20 @@
+{
+    "questions": [
+        {
+            "question": "Which of the following best explains the changes in China’s population shown in the table above?",
+            "image_link": "https://assets.learnosity.com/organisations/537/media.academicmerit.com/1d509c7c0923224a689c7719720aa9c4/original.png",
+            "answers": [
+                "Immigration to China increased due to religious persecution of Buddhists in India and Southeast Asia.",
+                "Agricultural output increased as a result of the use of the new crop strains, iron plows, and expanded irrigation.",
+                "Less warfare with neighboring states and nomadic peoples also meant fewer casualties in wars and a population increase.",
+                "The Confucian emphasis on the importance of family led many Chinese to have more children."
+            ],
+            "answer": 1,
+            "unit": 1,
+            "subunit": 2,
+            "topics": [
+                "population"
+            ]
+        }
+    ]
+}
