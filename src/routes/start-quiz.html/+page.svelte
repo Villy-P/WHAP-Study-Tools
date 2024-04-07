@@ -1,5 +1,6 @@
 <script lang="ts">
     import { quickQuiz } from '$lib/stores/QuickQuizStore';
+    import { questions } from '../../data/questions.json';
     import '../../app.css'
 
     const options = [
@@ -15,11 +16,18 @@
         }
     ];
 
-    let questionCount: number = 20;
+    let questionCount: number = getQuestionTypeOfUnit($quickQuiz.currentUnit) / 2;
     let minutes: number = 20;
 
     function startQuiz() {
         $quickQuiz.timeRemaining = minutes * 60;
+        $quickQuiz.questionCount = questionCount;
+    }
+
+    function getQuestionTypeOfUnit(unit: number): number {
+        return questions.filter((e) => {
+            return e.unit == unit
+        }).length;
     }
 </script>
 
@@ -33,11 +41,11 @@
             </div>
         {/each}
         <div>
-            <input type="range" min="10" max="100" id="questions" bind:value={questionCount}/>
+            <input type="range" min="1" max={getQuestionTypeOfUnit($quickQuiz.currentUnit)} id="questions" bind:value={questionCount}/>
             <label for="questions">Question Count ({questionCount})</label>
         </div>
         <div>
-            <input type="range" min="10" max="200" id="time" bind:value={minutes}/>
+            <input type="range" min="1" max="200" id="time" bind:value={minutes}/>
             <label for="time">{minutes === 200 ? "No Time Limit" : `${minutes} Minutes`}</label>
         </div>
         <button class="mr-4 bg-sky-500 px-3 py-1 rounded-xl mb-4">

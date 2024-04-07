@@ -51,7 +51,7 @@
     <button class="flex justify-center items-center h-3/4 mx-3 hover:bg-slate-100 p-2 rounded-lg text-sm text-blue-500 font-medium">
         <a href="/">Exit</a>
     </button>
-    <p class="text-sm font-semibold ml-auto">12 / 30</p>
+    <p class="text-sm font-semibold ml-auto">{$quickQuiz.currentQuestion} / {$quickQuiz.questionCount}</p>
     <p class="text-sm font-semibold mx-3">{formatTime($quickQuiz.timeRemaining)}</p>
 </div>
 <div class="w-full flex items-center flex-col gap-1 pt-10 pb-5">
