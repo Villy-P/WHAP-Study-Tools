@@ -33,14 +33,17 @@
 
     function getNewQuestion() {
         currentQuestion = questions.shift() as Question;
+        if (currentQuestion.unit != $quickQuiz.currentUnit)
+            getNewQuestion();
         correct = 0;
         selectedAnswer = -1
-        for (const question of questionWrapper.children)
-            question.classList.remove("bg-slate-200");
+        if (questionWrapper)
+            for (const question of questionWrapper.children)
+                question.classList.remove("bg-slate-200");
     }
 
     function checkAnswer() {
-        correct = currentQuestion.answer == selectedAnswer ? 1 : 2;
+        correct = currentQuestion?.answer == selectedAnswer ? 1 : 2;
     }
 </script>
 
