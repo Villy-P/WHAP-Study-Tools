@@ -22,6 +22,9 @@
     function startQuiz() {
         $quickQuiz.timeRemaining = minutes * 60;
         $quickQuiz.questionCount = questionCount;
+        $quickQuiz.currentQuestion = 0;
+        $quickQuiz.right = [];
+        $quickQuiz.wrong = [];
     }
 
     function getQuestionTypeOfUnit(unit: number): number {

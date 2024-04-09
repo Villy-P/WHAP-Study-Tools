@@ -35,6 +35,7 @@
         currentQuestion = questions.shift() as Question;
         if (currentQuestion.unit != $quickQuiz.currentUnit)
             getNewQuestion();
+        $quickQuiz.currentQuestion++;
         correct = 0;
         selectedAnswer = -1
         if (questionWrapper)
@@ -44,6 +45,10 @@
 
     function checkAnswer() {
         correct = currentQuestion?.answer == selectedAnswer ? 1 : 2;
+        if (correct == 1) 
+            $quickQuiz.right.push(currentQuestion);
+        else
+            $quickQuiz.wrong.push(currentQuestion);
     }
 </script>
 
