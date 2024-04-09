@@ -10,17 +10,17 @@
 
     function getAccuracy() {
         const right = $quickQuiz.right.length;
-        return right / $quickQuiz.questionCount * 100;
+        return (right / $quickQuiz.questionCount * 100).toFixed(2);
     }
 
     function getSubUnitCorrect(subunit: number) {
-        return $quickQuiz.right.find((value) => {
+        return $quickQuiz.right.filter((value) => {
             return value.subunit = subunit;
         });
     }
 
     function getSubUnitWrong(subunit: number) {
-        return $quickQuiz.wrong.find((value) => {
+        return $quickQuiz.wrong.filter((value) => {
             return value.subunit = subunit;
         });
     }
@@ -34,11 +34,11 @@
                 datasets: [
                     {
                         label: "Questions Correct by Subunit",
-                        data: [Array.from({ length: subunits }, (_, i) => getSubUnitCorrect(i))],
+                        data: [Array.from({ length: subunits }, (_, i) => getSubUnitCorrect(i).length)],
                         borderWidth: 1
                     }, {
                         label: "Questions Wrong by Subunit",
-                        data: [Array.from({ length: subunits }, (_, i) => getSubUnitWrong(i))],
+                        data: [Array.from({ length: subunits }, (_, i) => getSubUnitWrong(i)).length],
                         borderWidth: 1
                     }
                 ]
@@ -66,7 +66,7 @@
             <div>{$quickQuiz.wrong.length} wrong</div>
             <div>{$quickQuiz.questionCount - $quickQuiz.wrong.length - $quickQuiz.right.length} unfinished</div>
         </div>
-        <div class="flex justify-center text-center text-2xl">{getAccuracy()} Accuracy</div>
+        <div class="flex justify-center text-center text-2xl">{getAccuracy()}% Accuracy</div>
     </div>
     <div class="text-3xl py-4">Diagnostics</div>
     <canvas class="w-1/2" bind:this={byunit}/>

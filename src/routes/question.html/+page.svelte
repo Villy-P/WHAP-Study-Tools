@@ -31,10 +31,12 @@
     let currentQuestion: Question;
     let correct = 0;
 
-    function getNewQuestion() {
+    function getNewQuestion() {            
         currentQuestion = questions.shift() as Question;
-        if (currentQuestion.unit != $quickQuiz.currentUnit)
+        if (currentQuestion.unit != $quickQuiz.currentUnit) {
             getNewQuestion();
+            return;
+        }
         $quickQuiz.currentQuestion++;
         correct = 0;
         selectedAnswer = -1
@@ -96,9 +98,15 @@
                         <p class="p-4 pb-1 font-semibold">That's not the right answer. The correct answer is:</p>
                         <p class="p-4 pt-0">{currentQuestion.answers[currentQuestion.answer]}</p>
                     </div>
-                    <button class="check-ans-btn mr-2 mt-2" on:click={(e) => getNewQuestion()}>
-                        Next Question
-                    </button>
+                    {#if $quickQuiz.currentQuestion == $quickQuiz.questionCount}
+                        <button class="check-ans-btn mr-2 mt-2">
+                            <a href="/diagnostics.html">Finish Quiz</a>
+                        </button>
+                    {:else}
+                        <button class="check-ans-btn mr-2 mt-2" on:click={(e) => getNewQuestion()}>
+                            Next Question
+                        </button>
+                    {/if}
                 {/if}
             </div>
         {/if}
