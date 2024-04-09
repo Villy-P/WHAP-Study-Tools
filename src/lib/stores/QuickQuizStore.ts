@@ -2,6 +2,7 @@ import { writable, type Writable } from 'svelte/store';
 import type { Question } from '../../data/types';
 
 type Store = Writable<{
+    totalTime: number;
     timeRemaining: number;
     currentUnit: number;
     questionCount: number;
@@ -11,6 +12,7 @@ type Store = Writable<{
 }>
 
 export const quickQuiz: Store = writable({
+    totalTime: 0,
     timeRemaining: 0,
     currentUnit: 0,
     questionCount: 0,

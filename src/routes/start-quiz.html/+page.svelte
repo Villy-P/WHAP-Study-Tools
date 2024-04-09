@@ -20,6 +20,7 @@
     let minutes: number = 20;
 
     function startQuiz() {
+        $quickQuiz.totalTime = minutes * 60;
         $quickQuiz.timeRemaining = minutes * 60;
         $quickQuiz.questionCount = questionCount;
         $quickQuiz.currentQuestion = 0;
