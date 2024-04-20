@@ -16,7 +16,7 @@
         }
     ];
 
-    let questionCount: number = getQuestionTypeOfUnit($quickQuiz.currentUnit) / 2;
+    let questionCount: number = Math.floor(getQuestionTypeOfUnit($quickQuiz.currentUnit) / 2);
     let minutes: number = 20;
 
     function startQuiz() {
