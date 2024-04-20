@@ -1,0 +1,124 @@
+{
+    "questions": [
+        {
+            "question": "Russia was slow to do all of the following in he 19th century EXCEPT",
+            "answers": [
+                "Support entrepreneurs with loans",
+                "Build roads/transportation networks",
+                "Promote economic growth",
+                "Expand education for peasants"
+            ],
+            "answer": 2,
+            "unit": 7,
+            "subunit": 1,
+            "topics": [
+                "russia"
+            ]
+        },
+        {
+            "question": "TRUE or False: The Bolsheviks were the first example of communists running a large country.",
+            "answers": [
+                "True",
+                "False"
+            ],
+            "answer": 0,
+            "unit": 7,
+            "subunit": 1,
+            "topics": [
+                "russia",
+                "communism"
+            ]
+        },
+        {
+            "question": "TRUE or FALSE: Sun Yat-sen had a long rule in China",
+            "answers": [
+                "True",
+                "False"
+            ],
+            "answer": 1,
+            "unit": 7,
+            "subunit": 1,
+            "topics": [
+                "china"
+            ]
+        },
+        {
+            "question": "China faced all of the following DOMESTIC concerns in the 19th century EXCEPT",
+            "answers": [
+                "Lack of government funds to build",
+                "Over taxation of citizens",
+                "Ethnic Tensions",
+                "Danger of famine"
+            ],
+            "answer": 1,
+            "unit": 7,
+            "subunit": 1,
+            "topics": [
+                "china"
+            ]
+        },
+        {
+            "question": "Sun Yat-sen believed in all of the following governing principles EXCEPT",
+            "answers": [
+                "Nationalism",
+                "Individual Property Ownership",
+                "Democracy",
+                "Livelihood"
+            ],
+            "answer": 1,
+            "unit": 7,
+            "subunit": 1,
+            "topics": [
+                "china",
+                "government"
+            ]
+        },
+        {
+            "question": "Which empire was referred to as \"the sick man of Europe\" due to its struggling exports and agricultural economy?",
+            "answers": [
+                "The Roman Empire",
+                "The Ottoman Empire",
+                "The Chinese Empire",
+                "The Roman Empire"
+            ],
+            "answer": 1,
+            "unit": 7,
+            "subunit": 1,
+            "topics": [
+                "empire",
+                "economy",
+                "markets"
+            ]
+        },
+        {
+            "question": "The Ottoman Empire's secret alliance with _________________ led to the dismantling of the Ottoman Empire into smaller independent countries.",
+            "answers": [
+                "Germany",
+                "Britain",
+                "France",
+                "Poland"
+            ],
+            "answer": 0,
+            "unit": 7,
+            "subunit": 1,
+            "topics": [
+                "empire"
+            ]
+                  
+        },
+        {
+            "question": "TRUE or FALSE: Porfirio Diaz put Francisco Madero, his competition for president in jail which contributed to the Mexican Revolution.",
+            "answers": [
+                "True",
+                "False"
+            ],
+            "answer": 0,
+            "unit": 7,
+            "subunit": 1,
+            "topics": [
+                "mexico",
+                "revolution"
+            ]
+        }
+    ]
+}
