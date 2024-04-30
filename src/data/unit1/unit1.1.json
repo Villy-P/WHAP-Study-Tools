@@ -1,0 +1,21 @@
+{
+    "questions": [
+        {
+            "question": "The increased food production accompanying the introduction of Champa rice into China from Vietnam during the eleventh century best illustrates which of the following?",
+            "answers": [
+                "The reliance of China on food imports",
+                "The importance of Vietnam to the world economy",
+                "The stimulation of agriculture by technological innovation",
+                "The influence of China on neighboring societies"
+            ],
+            "answer": 2,
+            "unit": 1,
+            "subunit": 1,
+            "topics": [
+                "agriculture",
+                "technology",
+                "china"
+            ]
+        }
+    ]
+}
