@@ -6,6 +6,11 @@
 
     import '../../app.css'
     import { questions } from '../../data/questions';
+    import { onMount } from 'svelte';
+
+    onMount(() => {
+        localStorage.clear();
+    });
 
     function getQuestionTypeOfUnit(unit: number) {
         return questions.filter((e) => {

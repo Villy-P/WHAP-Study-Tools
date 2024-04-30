@@ -6,17 +6,49 @@
     import type { Question } from '../../data/types';
     import '../../app.css'
     import { shuffleArray } from '../../utilities/random';
+    import { writable } from 'svelte/store';
 
     onMount(() => {
+        const s = getStore();
         setInterval(() => {
             $quickQuiz.timeRemaining--;
         }, 1000);
-        shuffleArray(questions);
+        if (s)
+            return;
+        shuffleArray(validQuestions);
         getNewQuestion();
     });
 
     let questionWrapper: HTMLDivElement;
     let selectedAnswer = -1;
+    let validQuestions = JSON.parse(JSON.stringify(questions));
+
+    function saveStore(store: any) {
+        localStorage.setItem("store", JSON.stringify(store));
+        localStorage.setItem("question", JSON.stringify(currentQuestion));
+        localStorage.setItem("questions", JSON.stringify(validQuestions));
+        localStorage.setItem("correct", correct.toString());
+        console.log("Store saved: " + JSON.stringify(store))
+    }
+
+    function getStore() {
+        const store = localStorage.getItem("store");
+        const question = localStorage.getItem("question");
+        const questions = localStorage.getItem("questions");
+        const correctItems = localStorage.getItem("correct");
+        if (store) {
+            console.log(`Store get: ` + JSON.parse(store) + "\n" + store);
+            $quickQuiz = JSON.parse(store);
+            if (question)
+                currentQuestion = JSON.parse(question);
+            if (questions)
+                validQuestions = JSON.parse(questions);
+            if (correctItems)
+                correct = parseInt(correctItems);
+            return true;
+        }
+        return false;
+    }
 
     function clickAnswer(answer: EventTarget | null, index: number) {
         if (answer == null)
@@ -32,7 +64,7 @@
     let correct = 0;
 
     function getNewQuestion() {            
-        currentQuestion = questions.shift() as Question;
+        currentQuestion = validQuestions.shift() as Question;
         if (currentQuestion.unit != $quickQuiz.currentUnit) {
             getNewQuestion();
             return;
@@ -43,6 +75,7 @@
         if (questionWrapper)
             for (const question of questionWrapper.children)
                 question.classList.remove("bg-slate-200");
+        saveStore($quickQuiz);
     }
 
     function checkAnswer() {
@@ -51,6 +84,7 @@
             $quickQuiz.right.push(currentQuestion);
         else
             $quickQuiz.wrong.push(currentQuestion);
+        saveStore($quickQuiz);
     }
 </script>
 

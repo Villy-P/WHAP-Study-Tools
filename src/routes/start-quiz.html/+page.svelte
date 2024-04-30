@@ -2,6 +2,7 @@
     import { quickQuiz } from '$lib/stores/QuickQuizStore';
     import { questions } from '../../data/questions';
     import '../../app.css'
+    import { onMount } from 'svelte';
 
     const options = [
         {
@@ -27,6 +28,10 @@
         $quickQuiz.right = [];
         $quickQuiz.wrong = [];
     }
+
+    onMount(() => {
+        localStorage.clear();
+    });
 
     function getQuestionTypeOfUnit(unit: number): number {
         return questions.filter((e) => {

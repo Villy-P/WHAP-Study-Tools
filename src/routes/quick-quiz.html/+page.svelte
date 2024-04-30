@@ -3,6 +3,11 @@
     import BackButton from '../../components/backbtn.svelte';
 
     import '../../app.css'
+    import { onMount } from 'svelte';
+
+    onMount(() => {
+        localStorage.clear();
+    });
 </script>
 
 <BackButton/>
