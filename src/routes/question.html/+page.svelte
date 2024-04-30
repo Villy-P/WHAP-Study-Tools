@@ -10,7 +10,7 @@
 
     onMount(() => {
         const s = getStore();
-        setInterval(() => {
+        interval = setInterval(() => {
             $quickQuiz.timeRemaining--;
         }, 1000);
         if (s)
@@ -62,6 +62,7 @@
 
     let currentQuestion: Question;
     let correct = 0;
+    let interval = 0;
 
     function getNewQuestion() {            
         currentQuestion = validQuestions.shift() as Question;
@@ -89,7 +90,7 @@
 </script>
 
 <div class="flex w-full border-b-2 border-gray-600 h-12 items-center">
-    <button class="flex justify-center items-center h-3/4 mx-3 hover:bg-slate-100 p-2 rounded-lg text-sm text-blue-500 font-medium">
+    <button class="flex justify-center items-center h-3/4 mx-3 hover:bg-slate-100 p-2 rounded-lg text-sm text-blue-500 font-medium" on:click={() => clearInterval(interval)}>
         <a href="/">Exit</a>
     </button>
     <p class="text-sm font-semibold ml-auto">{$quickQuiz.currentQuestion} / {$quickQuiz.questionCount}</p>
