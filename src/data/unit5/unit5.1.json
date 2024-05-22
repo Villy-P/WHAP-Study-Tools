@@ -12,7 +12,7 @@
             ],
             "answer": 1,
             "unit": 5,
-            "subunit": 0,
+            "subunit": 1,
             "topics": [
                 "enlightenment"
             ]
@@ -29,7 +29,7 @@
             ],
             "answer": 2,
             "unit": 5,
-            "subunit": 0,
+            "subunit": 1,
             "topics": [
                 "slavery",
                 "abolitionism",
@@ -48,7 +48,7 @@
             ],
             "answer": 1,
             "unit": 5,
-            "subunit": 0,
+            "subunit": 1,
             "topics": [
                 "enlightenment"
             ]
@@ -64,7 +64,7 @@
             ],
             "answer": 2,
             "unit": 5,
-            "subunit": 0,
+            "subunit": 1,
             "topics": [
                 "enlightenment",
                 "suffrage",
@@ -83,7 +83,7 @@
             ],
             "answer": 3,
             "unit": 5,
-            "subunit": 0,
+            "subunit": 1,
             "topics": [
                 "enlightenment",
                 "markets"
@@ -101,7 +101,7 @@
             ],
             "answer": 2,
             "unit": 5,
-            "subunit": 0,
+            "subunit": 1,
             "topics": [
                 "enlightenment",
                 "communism"
