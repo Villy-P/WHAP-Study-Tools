@@ -52,4 +52,19 @@
         <div class="flex justify-center text-center text-2xl">{getAccuracy()}% Accuracy</div>
     </div>
     <div class="text-3xl py-4">Diagnostics</div>
+    <div class="flex flex-col w-11/12">
+        {#if $quickQuiz.right.length > 0}
+            <p class="text-lg font-medium">Answered Correctly:</p>
+            {#each $quickQuiz.right as item}
+                <div>{item.question}</div>
+             {/each}
+        {/if}
+    
+        {#if $quickQuiz.wrong.length > 0}
+            <p class="text-lg font-medium">Answered Incorrectly:</p>
+            {#each $quickQuiz.wrong as item}
+                <div>{item.question}</div>
+             {/each}
+        {/if}
+    </div>
 </div>
