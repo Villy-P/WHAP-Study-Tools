@@ -34,6 +34,12 @@
                 <img class="w-96" alt="data" src={item.image_link}/>
             </div>
         {/if}
+        <p class="font-medium p-2">Topics:</p>
+        <div class="flex flex-wrap gap-2 p-2">
+            {#each item.topics as topic}
+                <p class="bg-slate-300 rounded-lg p-2">{ topic }</p>
+            {/each}
+        </div>
     </div>
     <div class="w-1/2">
         <p class="font-medium p-4">Answer Choices:</p>
