@@ -6,8 +6,6 @@
     import { Chart } from 'chart.js/auto'
     import { getSubUnitsFromUnit } from '../../utilities/unit';
 
-    let byunit: HTMLCanvasElement;
-
     function getAccuracy() {
         const right = $quickQuiz.right.length;
         return (right / $quickQuiz.questionCount * 100).toFixed(2);
@@ -33,37 +31,9 @@
     }
 
     onMount(() => {
-        const subunits = getSubUnitsFromUnit($quickQuiz.currentUnit);
-        const data = localStorage.getItem("store");
-        if (data)
-            $quickQuiz = JSON.parse(data);
-        getSubUnits();
-        console.log(Array.from(subunitData.keys()).map((e) => getSubUnitCorrect(e).length), $quickQuiz);
-        new Chart(byunit, {
-            type: "bar",
-            data: {
-                labels: Array.from(subunitData.keys()),
-                datasets: [
-                    {
-                        label: "Questions Correct by Subunit",
-                        data:  Array.from(subunitData.keys()).map((e) => getSubUnitCorrect(e).length),
-                        borderWidth: 1
-                    }, 
-                    {
-                        label: "Questions Wrong by subunit",
-                        data:  Array.from(subunitData.keys()).map((e) => getSubUnitWrong(e).length),
-                        borderWidth: 1
-                    }
-                ]
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                }
-            }
-        });
+        const store = localStorage.getItem("store");
+        if (store)
+            $quickQuiz = JSON.parse(store);
     });
 </script>
 
@@ -82,5 +52,4 @@
         <div class="flex justify-center text-center text-2xl">{getAccuracy()}% Accuracy</div>
     </div>
     <div class="text-3xl py-4">Diagnostics</div>
-    <canvas class="w-1/2" bind:this={byunit}/>
 </div>
