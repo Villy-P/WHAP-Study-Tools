@@ -25,20 +25,33 @@
         });
     }
 
+    let subunitData = new Map<number, number>();
+
+    function getSubUnits() {
+        for (const item of $quickQuiz.right.concat($quickQuiz.wrong))
+            subunitData.set(item.subunit, (subunitData.get(item.subunit) || 0) + 1);
+    }
+
     onMount(() => {
         const subunits = getSubUnitsFromUnit($quickQuiz.currentUnit);
+        const data = localStorage.getItem("store");
+        if (data)
+            $quickQuiz = JSON.parse(data);
+        getSubUnits();
+        console.log(Array.from(subunitData.keys()).map((e) => getSubUnitCorrect(e).length), $quickQuiz);
         new Chart(byunit, {
             type: "bar",
             data: {
-                labels: [Array.from({ length: subunits }, (_, i) => (i + 1).toString())],
+                labels: Array.from(subunitData.keys()),
                 datasets: [
                     {
                         label: "Questions Correct by Subunit",
-                        data: [Array.from({ length: subunits }, (_, i) => getSubUnitCorrect(i).length)],
+                        data:  Array.from(subunitData.keys()).map((e) => getSubUnitCorrect(e).length),
                         borderWidth: 1
-                    }, {
-                        label: "Questions Wrong by Subunit",
-                        data: [Array.from({ length: subunits }, (_, i) => getSubUnitWrong(i)).length],
+                    }, 
+                    {
+                        label: "Questions Wrong by subunit",
+                        data:  Array.from(subunitData.keys()).map((e) => getSubUnitWrong(e).length),
                         borderWidth: 1
                     }
                 ]
@@ -61,7 +74,7 @@
             <div>{$quickQuiz.questionCount} Questions</div>
         </div>
         <div class="flex gap-10 justify-center text-center flex-wrap pb-4">
-            <div>You took {formatTime($quickQuiz.totalTime - $quickQuiz.timeRemaining)}</div>
+            <div>You took {formatTime($quickQuiz.totalTime - $quickQuiz.timeRemaining)}s</div>
             <div>{$quickQuiz.right.length} right</div>
             <div>{$quickQuiz.wrong.length} wrong</div>
             <div>{$quickQuiz.questionCount - $quickQuiz.wrong.length - $quickQuiz.right.length} unfinished</div>
