@@ -5,6 +5,7 @@
     import { onMount } from 'svelte';
     import { Chart } from 'chart.js/auto'
     import { getSubUnitsFromUnit } from '../../utilities/unit';
+    import Diagnostic from '../../components/diagnostic.svelte';
 
     function getAccuracy() {
         const right = $quickQuiz.right.length;
@@ -55,16 +56,17 @@
     <div class="flex flex-col w-11/12">
         {#if $quickQuiz.right.length > 0}
             <p class="text-lg font-medium">Answered Correctly:</p>
-            {#each $quickQuiz.right as item}
-                <div>{item.question}</div>
+            {#each $quickQuiz.right as item, index}
+                <Diagnostic unit={index + 1} item={item}/>
              {/each}
         {/if}
     
         {#if $quickQuiz.wrong.length > 0}
             <p class="text-lg font-medium">Answered Incorrectly:</p>
-            {#each $quickQuiz.wrong as item}
-                <div>{item.question}</div>
+            {#each $quickQuiz.wrong as item, index}
+                <Diagnostic unit={index + 1} item={item}/>
              {/each}
         {/if}
+        <br>
     </div>
 </div>
