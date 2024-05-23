@@ -4,19 +4,6 @@
     import '../../app.css'
     import { onMount } from 'svelte';
 
-    const options = [
-        {
-            id: "mcq",
-            name: "Multiple Choice Questions",
-        }, {
-            id: "order-items",
-            name: "Timeline Ordering"
-        }, {
-            id: "allow-images",
-            name: "Allow Questions with Images"
-        }
-    ];
-
     let questionCount: number = Math.floor(getQuestionTypeOfUnit($quickQuiz.currentUnit) / 2);
     let minutes: number = 20;
 
@@ -43,12 +30,6 @@
 <div class="w-full h-screen flex justify-center items-center flex-col gap-1">
     <div>
         <h1 class="text-xl">Options:</h1>
-        {#each options as option}
-            <div>            
-                <input type="checkbox" id={option.id}/>
-                <label for={option.id}>{option.name}</label><br>
-            </div>
-        {/each}
         <div>
             <input type="range" min="1" max={getQuestionTypeOfUnit($quickQuiz.currentUnit)} id="questions" bind:value={questionCount}/>
             <label for="questions">Question Count ({questionCount})</label>
