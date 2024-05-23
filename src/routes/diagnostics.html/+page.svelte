@@ -52,6 +52,9 @@
         </div>
         <div class="flex justify-center text-center text-2xl">{getAccuracy()}% Accuracy</div>
     </div>
+    <button class="bg-sky-500 px-3 py-1 rounded-xl my-4">
+        <a class="w-full h-full" href="/">Go to Home</a>
+    </button>
     <div class="text-3xl py-4">Diagnostics</div>
     <div class="flex flex-col w-11/12">
         {#if $quickQuiz.right.length > 0}
