@@ -1,60 +1,62 @@
 {
-    "topics": [{
+    "topics": [
+        {
             "name": "enlightenment",
-            "image": " "
+            "image": "./assets/btn-bg/topics/enlightenment.jpg"
         }, {
             "name": "slavery",
-            "image": " "
+            "image": "./assets/btn-bg/topics/slavery.jpg"
         }, {
             "name": "abolitionism",
-            "image": " "
+            "image": "./assets/btn-bg/topics/abolitionism.jpg"
         }, {
             "name": "south-america",
-            "image": " "
+            "image": "./assets/btn-bg/topics/south-america.jpg"
         }, {
             "name": "suffrage",
-            "image": " "
+            "image": "./assets/btn-bg/topics/suffrage.jpg"
         }, {
             "name": "womens-rights",
-            "image": " "
+            "image": "./assets/btn-bg/topics/womens-rights.jpg"
         }, {
             "name": "feminism",
-            "image": " "
+            "image": "./assets/btn-bg/topics/feminism.jpg"
         }, {
             "name": "markets",
-            "image": " "
+            "image": "./assets/btn-bg/topics/markets.jpg"
         }, {
             "name": "communism",
-            "image": " "
+            "image": "./assets/btn-bg/topics/communism.jpg"
         }, {
             "name": "industrial-revolution",
-            "image": " "
+            "image": "./assets/btn-bg/topics/industrial-revolution.jpg"
         }, {
             "name": "factories",
-            "image": " "
+            "image": "./assets/btn-bg/topics/factories.jpg"
         }, {
             "name": "population",
-            "image": " "
+            "image": "./assets/btn-bg/topics/population.jpg"
         }, {
             "name": "russia",
-            "image": " "
+            "image": "./assets/btn-bg/topics/russia.jpg"
         }, {
             "name": "china",
-            "image": " "
+            "image": "./assets/btn-bg/topics/china.jpg"
         }, {
             "name": "government",
-            "image": " "
+            "image": "./assets/btn-bg/topics/government.jpg"
         }, {
             "name": "empire",
-            "image": " "
+            "image": "./assets/btn-bg/topics/empire.jpg"
         }, {
             "name": "economy",
-            "image": " "
+            "image": "./assets/btn-bg/topics/economy.jpg"
         }, {
             "name": "mexico",
-            "image": " "
+            "image": "./assets/btn-bg/topics/mexico.jpg"
         }, {
             "name": "revolution",
-            "image": " "
-    }]
+            "image": "./assets/btn-bg/topics/revolution.jpg"
+        }
+    ]
 }
