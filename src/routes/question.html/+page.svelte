@@ -66,7 +66,7 @@
 
     function getNewQuestion() {            
         currentQuestion = validQuestions.shift() as Question;
-        if (currentQuestion.unit != $quickQuiz.currentUnit) {
+        if (($quickQuiz.byUnit && (currentQuestion.unit != $quickQuiz.currentUnit)) || (!$quickQuiz.byUnit && !currentQuestion.topics.includes($quickQuiz.currentTopic))) {
             getNewQuestion();
             return;
         }

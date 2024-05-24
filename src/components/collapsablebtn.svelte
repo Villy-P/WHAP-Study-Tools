@@ -28,7 +28,7 @@
     </button>
     <div class="h-40 overflow-hidden w-0 hidden border-y-2 border-y-gray-500" bind:this={collapsed}>
         <p class="px-5 py-4">{desc} ({count} Questions)</p>
-        <button class="float-right mr-4 bg-sky-500 px-3 py-1 rounded-xl mb-4" on:click={() => $quickQuiz.currentUnit = unit}>
+        <button class="float-right mr-4 bg-sky-500 px-3 py-1 rounded-xl mb-4" on:click={() => {$quickQuiz.currentUnit = unit; $quickQuiz.byUnit = true}}>
             <a class="w-full h-full" href={go}>Begin Quiz</a>
         </button>
     </div>
