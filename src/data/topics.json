@@ -1,0 +1,60 @@
+{
+    "topics": [{
+            "name": "enlightenment",
+            "image": " "
+        }, {
+            "name": "slavery",
+            "image": " "
+        }, {
+            "name": "abolitionism",
+            "image": " "
+        }, {
+            "name": "south-america",
+            "image": " "
+        }, {
+            "name": "suffrage",
+            "image": " "
+        }, {
+            "name": "womens-rights",
+            "image": " "
+        }, {
+            "name": "feminism",
+            "image": " "
+        }, {
+            "name": "markets",
+            "image": " "
+        }, {
+            "name": "communism",
+            "image": " "
+        }, {
+            "name": "industrial-revolution",
+            "image": " "
+        }, {
+            "name": "factories",
+            "image": " "
+        }, {
+            "name": "population",
+            "image": " "
+        }, {
+            "name": "russia",
+            "image": " "
+        }, {
+            "name": "china",
+            "image": " "
+        }, {
+            "name": "government",
+            "image": " "
+        }, {
+            "name": "empire",
+            "image": " "
+        }, {
+            "name": "economy",
+            "image": " "
+        }, {
+            "name": "mexico",
+            "image": " "
+        }, {
+            "name": "revolution",
+            "image": " "
+    }]
+}

@@ -13,5 +13,5 @@
 
 <div class="flex justify-center gap-3">
     <MenuButton title="Quick Quiz" go="quick-quiz.html" backgroundImage="./assets/btn-bg/main-menu/quiz.webp"/>
-    <MenuButton title="Flashcards" go="flashcards.html" backgroundImage="./assets/btn-bg/main-menu/flashcards.avif"/>
+    <!-- <MenuButton title="Flashcards" go="flashcards.html" backgroundImage="./assets/btn-bg/main-menu/flashcards.avif"/> -->
 </div>
