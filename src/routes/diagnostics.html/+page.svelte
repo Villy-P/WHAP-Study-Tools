@@ -49,7 +49,7 @@
         <p class="font-normal text-gray-700 dark:text-gray-400 leading-tight">{$quickQuiz.wrong.length} wrong</p>
         <p class="font-normal text-gray-700 dark:text-gray-400 leading-tight">{$quickQuiz.questionCount - $quickQuiz.right.length - $quickQuiz.wrong.length} unanswered</p>
         <p class="font-normal text-gray-700 dark:text-gray-400 leading-tight">{getAccuracy()}% Accuracy</p>
-        <Button class="w-fit mt-3" color="blue">
+        <Button class="w-fit mt-3" color="blue" href="/">
             Go Home <ArrowRightOutline class="w-6 h-6 ms-2 text-white" />
         </Button>
     </Card>
@@ -65,7 +65,7 @@
         {/if}
     
         {#if $quickQuiz.wrong.length > 0}
-        <Heading tag="h4">Answered Incorectly:</Heading>
+            <Heading tag="h4">Answered Incorectly:</Heading>
             <Accordion>                
                 {#each $quickQuiz.wrong as item, index}
                     <Diagnostic unit={index + 1} item={item}/>

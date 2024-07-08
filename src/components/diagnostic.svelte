@@ -6,17 +6,6 @@
     export let item: Question;
 
     let collapsed: HTMLDivElement;
-
-    function collapse() {
-        if (collapsed.style.width == "0px" || collapsed.style.width == "") {
-            collapsed.style.width = "100%";
-            collapsed.style.display = "flex";
-            collapsed.style.transition = "transition: width 2s";
-        } else {
-            collapsed.style.width = "0px";
-            collapsed.style.display = "none";
-        }
-    }
 </script>
 
 <AccordionItem>
