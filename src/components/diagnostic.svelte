@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { AccordionItem, Badge, Button, Heading, P } from "flowbite-svelte";
     import type { Question } from "../data/types";
 
     export let unit: number;
@@ -18,39 +19,39 @@
     }
 </script>
 
-<button class="flex border-2 border-black p-4 cursor-pointer" on:click={() => collapse()}>
-    <div>#{ unit } --- Unit { item.unit }.{ item.subunit }</div>
-</button>
-<div class="h-fit overflow-hidden w-0 hidden border-x-2 border-black border-b-2" bind:this={collapsed}>
-    <div class="w-1/2 flex flex-col border-r-2 border-black">
-        <p class="font-medium p-2">Question:</p>
-        <div class="w-full p-2 font-semibold">{item.question}</div>
-        {#if item.passage}
-            <div class="w-full p-2 pb-0">{item.passage_header}</div>
-            <div class="w-full p-2 pt-0">{item.passage}</div>
-        {/if}
-        {#if item.image_link}
-            <div class="flex-grow overflow-auto flex">
-                <img class="w-96" alt="data" src={item.image_link}/>
+<AccordionItem>
+    <span slot="header">#{ unit } --- Unit { item.unit }.{ item.subunit }</span>
+    <div class="h-fit overflow-hidden w-full flex" bind:this={collapsed}>
+        <div class="w-1/2 flex flex-col border-r-2 border-gray-500">
+            <Heading tag="h6">Question:</Heading>
+            <P tag="h6">{item.question}</P>
+            {#if item.passage}
+                <P class="mb-3 md:text-xl" weight="light" size="lg" color="text-gray-500 dark:text-gray-400">{item.passage_header}</P>
+                <P weight="light" color="text-gray-500 dark:text-gray-400">{item.passage}</P>
+            {/if}
+            {#if item.image_link}
+                <div class="flex-grow overflow-auto flex">
+                    <img class="w-96" alt="data" src={item.image_link}/>
+                </div>
+            {/if}
+            <Heading tag="h6">Topics:</Heading>
+            <div class="flex flex-wrap gap-2 p-2">
+                {#each item.topics as topic}
+                    <Badge color="dark">{topic}</Badge>
+                {/each}
             </div>
-        {/if}
-        <p class="font-medium p-2">Topics:</p>
-        <div class="flex flex-wrap gap-2 p-2">
-            {#each item.topics as topic}
-                <p class="bg-slate-300 rounded-lg p-2">{ topic }</p>
-            {/each}
+        </div>
+        <div class="w-1/2">
+            <Heading tag="h6" class="p-4">Answer Choices:</Heading>
+            <div class="w-full flex flex-col gap-2 p-2">
+                {#each item.answers as answer, index}
+                    <Button color="dark">{answer}</Button>
+                {/each}
+            </div>
+            <Heading tag="h6" class="p-4">Correct Answer:</Heading>
+            <div class="w-full flex flex-col gap-2 p-2">
+                <Button color="dark">{item.answers[item.answer]}</Button>
+            </div>
         </div>
     </div>
-    <div class="w-1/2">
-        <p class="font-medium p-4">Answer Choices:</p>
-        <div class="w-full flex flex-col gap-2 p-2">
-            {#each item.answers as answer, index}
-                <button class="question-response">{answer}</button>
-            {/each}
-        </div>
-        <p class="font-medium p-4">Correct Answer:</p>
-        <div class="w-full flex flex-col gap-2 p-2">
-            <button class="question-response">{item.answers[item.answer]}</button>
-        </div>
-    </div>
-</div>
+</AccordionItem>

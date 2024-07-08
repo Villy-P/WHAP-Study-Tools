@@ -6,6 +6,8 @@
     import { Chart } from 'chart.js/auto'
     import { getSubUnitsFromUnit } from '../../utilities/unit';
     import Diagnostic from '../../components/diagnostic.svelte';
+    import { Card, Button, Heading, Accordion } from 'flowbite-svelte';
+    import { ArrowRightOutline } from 'flowbite-svelte-icons';
 
     function getAccuracy() {
         const right = $quickQuiz.right.length;
@@ -39,36 +41,36 @@
 </script>
 
 <div class="w-full flex items-center flex-col gap-1 pt-10 pb-5 justify-center">
-    <div class="w-11/12 rounded-lg border-2 border-gray-900 h-fit flex-col p-5 justify-center items-center">
-        <div class="flex gap-10 justify-center text-center flex-wrap pb-4">
-            <div>Unit {$quickQuiz.currentUnit} Quick Quiz</div>
-            <div>{$quickQuiz.questionCount} Questions</div>
-        </div>
-        <div class="flex gap-10 justify-center text-center flex-wrap pb-4">
-            <div>You took {formatTime($quickQuiz.totalTime - $quickQuiz.timeRemaining)}s</div>
-            <div>{$quickQuiz.right.length} right</div>
-            <div>{$quickQuiz.wrong.length} wrong</div>
-            <div>{$quickQuiz.questionCount - $quickQuiz.wrong.length - $quickQuiz.right.length} unfinished</div>
-        </div>
-        <div class="flex justify-center text-center text-2xl">{getAccuracy()}% Accuracy</div>
-    </div>
-    <button class="bg-sky-500 px-3 py-1 rounded-xl my-4">
-        <a class="w-full h-full" href="/">Go to Home</a>
-    </button>
-    <div class="text-3xl py-4">Diagnostics</div>
+    <Card>
+        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Unit {$quickQuiz.currentUnit} Quick Quiz</h5>
+        <h6 class="mb-2 text-xl font-semibold tracking-tight text-gray-900 dark:text-white">{$quickQuiz.questionCount} Questions</h6>
+        <p class="font-normal text-gray-700 dark:text-gray-400 leading-tight">You took {formatTime($quickQuiz.totalTime - $quickQuiz.timeRemaining)}s</p>
+        <p class="font-normal text-gray-700 dark:text-gray-400 leading-tight">{$quickQuiz.right.length} right</p>
+        <p class="font-normal text-gray-700 dark:text-gray-400 leading-tight">{$quickQuiz.wrong.length} wrong</p>
+        <p class="font-normal text-gray-700 dark:text-gray-400 leading-tight">{$quickQuiz.questionCount - $quickQuiz.right.length - $quickQuiz.wrong.length} unanswered</p>
+        <p class="font-normal text-gray-700 dark:text-gray-400 leading-tight">{getAccuracy()}% Accuracy</p>
+        <Button class="w-fit mt-3" color="blue">
+            Go Home <ArrowRightOutline class="w-6 h-6 ms-2 text-white" />
+        </Button>
+    </Card>
+    <Heading tag="h2" customSize="text-4xl font-extrabold" class="text-center pt-3">Diagnostics</Heading>
     <div class="flex flex-col w-11/12">
         {#if $quickQuiz.right.length > 0}
-            <p class="text-lg font-medium">Answered Correctly:</p>
-            {#each $quickQuiz.right as item, index}
-                <Diagnostic unit={index + 1} item={item}/>
-             {/each}
+            <Heading tag="h4">Answered Correctly:</Heading>
+            <Accordion>
+                {#each $quickQuiz.right as item, index}
+                    <Diagnostic unit={index + 1} item={item}/>
+                 {/each}
+            </Accordion>
         {/if}
     
         {#if $quickQuiz.wrong.length > 0}
-            <p class="text-lg font-medium">Answered Incorrectly:</p>
-            {#each $quickQuiz.wrong as item, index}
-                <Diagnostic unit={index + 1} item={item}/>
-             {/each}
+        <Heading tag="h4">Answered Incorectly:</Heading>
+            <Accordion>                
+                {#each $quickQuiz.wrong as item, index}
+                    <Diagnostic unit={index + 1} item={item}/>
+                 {/each}
+            </Accordion>
         {/if}
         <br>
     </div>
