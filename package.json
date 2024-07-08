@@ -26,6 +26,7 @@
 	"type": "module",
 	"dependencies": {
 		"flowbite": "^2.4.1",
+		"flowbite-svelte": "^0.46.14",
 		"flowbite-svelte-icons": "^1.6.1"
 	}
 }

@@ -1,5 +1,6 @@
 <script lang="ts">
     import MenuButton from '../components/meunubtn.svelte';
+    import { Heading } from 'flowbite-svelte';
 
     import '../app.css'
     import { onMount } from 'svelte';
@@ -9,8 +10,7 @@
     });
 </script>
 
-<svelte:body use:classList={"bg-[#111827]"}/>
-<h1 class="font-bold text-3xl text-center py-6">AP World History Study Tools</h1>
+<Heading tag="h2" customSize="text-4xl font-extrabold text-center py-6">AP World History Study Tools</Heading>
 
 <div class="flex justify-center gap-3">
     <MenuButton title="Quick Quiz" go="quick-quiz.html" backgroundImage="./assets/btn-bg/main-menu/quiz.webp"/>

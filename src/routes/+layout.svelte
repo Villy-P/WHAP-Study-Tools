@@ -1,7 +1,9 @@
-<style lang="postcss">
-    :global(body) {
-      @apply bg-zinc-900;
-    }
-</style>
+<script lang="ts">
+    import { onMount } from "svelte";
+
+    onMount(() => {
+        document.body.classList.add("bg-[#111827]", "dark")
+    });
+</script>
 
 <slot/>
