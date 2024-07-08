@@ -9,6 +9,7 @@
     });
 </script>
 
+<svelte:body use:classList={"bg-[#111827]"}/>
 <h1 class="font-bold text-3xl text-center py-6">AP World History Study Tools</h1>
 
 <div class="flex justify-center gap-3">
