@@ -1,6 +1,6 @@
 <script lang="ts">
     import MenuButton from '../components/meunubtn.svelte';
-    import { Heading } from 'flowbite-svelte';
+    import { Heading, Card } from 'flowbite-svelte';
 
     import '../app.css'
     import { onMount } from 'svelte';
