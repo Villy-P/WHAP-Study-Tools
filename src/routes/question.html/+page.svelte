@@ -91,7 +91,7 @@
 </script>
 
 <div class="flex w-full border-b-2 border-gray-600 h-12 items-center">
-    <Button color="blue" on:click={() => clearInterval(interval)}>Exit</Button>
+    <Button href='/' color="blue" on:click={() => clearInterval(interval)}>Exit</Button>
     <div class="flex ml-auto gap-3">
         <Heading tag="h6">{$quickQuiz.currentQuestion} / {$quickQuiz.questionCount}</Heading>
         <Heading tag="h6" class="pr-4">{formatTime($quickQuiz.timeRemaining)}</Heading>
