@@ -7,6 +7,7 @@
     import '../../app.css'
     import { shuffleArray } from '../../utilities/random';
     import { writable } from 'svelte/store';
+    import { Button, Heading, P } from 'flowbite-svelte';
 
     onMount(() => {
         const s = getStore();
@@ -90,19 +91,19 @@
 </script>
 
 <div class="flex w-full border-b-2 border-gray-600 h-12 items-center">
-    <button class="flex justify-center items-center h-3/4 mx-3 hover:bg-slate-100 p-2 rounded-lg text-sm text-blue-500 font-medium" on:click={() => clearInterval(interval)}>
-        <a href="/">Exit</a>
-    </button>
-    <p class="text-sm font-semibold ml-auto">{$quickQuiz.currentQuestion} / {$quickQuiz.questionCount}</p>
-    <p class="text-sm font-semibold mx-3">{formatTime($quickQuiz.timeRemaining)}</p>
+    <Button color="blue" on:click={() => clearInterval(interval)}>Exit</Button>
+    <div class="flex ml-auto gap-3">
+        <Heading tag="h6">{$quickQuiz.currentQuestion} / {$quickQuiz.questionCount}</Heading>
+        <Heading tag="h6" class="pr-4">{formatTime($quickQuiz.timeRemaining)}</Heading>
+    </div>
 </div>
 <div class="w-full flex items-center flex-col gap-1 pt-10 pb-5">
     <div class="w-8/12 flex flex-col gap-3">
         {#if currentQuestion}
-            <div class="w-full p-2 font-semibold">{currentQuestion.question}</div>
+            <Heading tag="h4">{currentQuestion.question}</Heading>
             {#if currentQuestion.passage}
-                <div class="w-full p-2 pb-0">{currentQuestion.passage_header}</div>
-                <div class="w-full p-2 pt-0">{currentQuestion.passage}</div>
+                <P class="mb-3 md:text-xl" weight="light" size="lg" color="text-gray-500 dark:text-gray-400">{currentQuestion.passage_header}</P>
+                <P weight="light" color="text-gray-500 dark:text-gray-400">{currentQuestion.passage}</P>
             {/if}
             {#if currentQuestion.image_link}
                 <div class="flex-grow overflow-auto flex">
@@ -111,22 +112,18 @@
             {/if}
             <div class="w-full flex flex-col gap-2" bind:this={questionWrapper}>
                 {#each currentQuestion.answers as answer, index}
-                    <button class="question-response" on:click={(e) => clickAnswer(e.target, index)}>{answer}</button>
+                    <Button color="dark" on:click={(e) => clickAnswer(e.target, index)}>{answer}</Button>
                 {/each}
             </div>
             {#if selectedAnswer != -1 && correct == 0}
-                <button class="check-ans-btn" on:click={(e) => checkAnswer()}>
-                    Check Answer
-                </button>
+                <Button on:click={(e) => checkAnswer()} color="blue">Check Answer</Button>
             {/if}
             <div class="flex w-full justify-center items-center flex-col">
                 {#if correct == 1}
                 <div class="w-11/12 bg-green-500 rounded-lg text-gray-100">
                     <p class="p-4 font-semibold">That's the correct answer! Good job</p>
                 </div>
-                <button class="check-ans-btn mr-2 mt-2" on:click={(e) => getNewQuestion()}>
-                    Next Question
-                </button>
+                <Button on:click={(e) => getNewQuestion()} color="blue">Next Question</Button>
                 {/if}
                 {#if correct == 2}
                     <div class="w-11/12 bg-red-500 rounded-lg text-gray-100">
@@ -134,13 +131,9 @@
                         <p class="p-4 pt-0">{currentQuestion.answers[currentQuestion.answer]}</p>
                     </div>
                     {#if $quickQuiz.currentQuestion == $quickQuiz.questionCount}
-                        <button class="check-ans-btn mr-2 mt-2">
-                            <a href="/diagnostics.html">Finish Quiz</a>
-                        </button>
+                        <Button href="/diagnostics.html" color="blue" class="float-right mt-4">Finish Quiz</Button>
                     {:else}
-                        <button class="check-ans-btn mr-2 mt-2" on:click={(e) => getNewQuestion()}>
-                            Next Question
-                        </button>
+                        <Button on:click={(e) => getNewQuestion()} color="blue" class="float-right mt-4">Next Question</Button>
                     {/if}
                 {/if}
             </div>
