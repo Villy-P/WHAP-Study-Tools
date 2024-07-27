@@ -1,5 +1,25 @@
 {
     "questions": [
-
+        {
+            "question": "Your question here",
+            "passage_header": "(Optional) If you have a passage and it has a header, you can put it here",
+            "passage": "(Optional) If you a passage, you can put it here",
+            "answers": [
+                "A list of answers. This is at index 0",
+                "It can have as many as you want. This is at index 1",
+                "But it needs at least one. This is at index 2",
+                "And most will have 4. This is at index 3"
+            ],
+            "answer": 1 <- This needs to be a number that corresponds to the index in the answers array
+            "unit": 4,
+            "subunit": 5,
+            "topics": [
+                "Each question should have topics associated with it.",
+                "You can find a list of topics at src/data/topics.json",
+                "Try and use some from that list",
+                "If you must add one, just add it here and we'll do the rest"
+            ],
+            "image_link": D"(Optional) link to an image, if you use it, ex: https://upload.wikimedia.org/wikipedia/en/2/29/School_for_the_Talented_and_Gifted_logo.png"
+        }
     ]
 }
