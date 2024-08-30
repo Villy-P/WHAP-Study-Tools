@@ -3,8 +3,6 @@
     import { formatTime } from '../../utilities/time';
     import '../../app.css'
     import { onMount } from 'svelte';
-    import { Chart } from 'chart.js/auto'
-    import { getSubUnitsFromUnit } from '../../utilities/unit';
     import Diagnostic from '../../components/diagnostic.svelte';
     import { Card, Button, Heading, Accordion } from 'flowbite-svelte';
     import { ArrowRightOutline } from 'flowbite-svelte-icons';
