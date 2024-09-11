@@ -4,8 +4,8 @@ export function formatTime(duration: number) {
     const secs = ~~duration % 60;
     let ret = "";
     if (hrs > 0)
-        ret += "" + hrs + ":" + (mins < 10 ? "0" : "");
-    ret += "" + mins + ":" + (secs < 10 ? "0" : "");
-    ret += "" + secs;
+        ret += String(hrs) + ":" + (mins < 10 ? "0" : "");
+    ret += String(mins) + ":" + (secs < 10 ? "0" : "");
+    ret += String(secs);
     return ret;
 }
