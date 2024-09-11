@@ -1,3 +1,9 @@
+/**
+ * Formats time in milliseconds to hr:min:sec
+ * 
+ * @param duration Time in milliseconds
+ * @returns String representing the time
+ */
 export function formatTime(duration: number) {
     const hrs = ~~(duration / 3600);
     const mins = ~~((duration % 3600) / 60);

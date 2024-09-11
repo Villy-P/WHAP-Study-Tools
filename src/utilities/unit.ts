@@ -1,3 +1,9 @@
+/**
+ * Gets the amount of subunits found within a unit
+ * 
+ * @param unit The unit
+ * @returns Amount of subunits (1.1, 1.2, 1.3, etc.) found within that unit
+ */
 export function getSubUnitsFromUnit(unit: number) {
     switch (unit) {
         case 1:
