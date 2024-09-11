@@ -13,7 +13,7 @@ type Store = Writable<{
     wrong: Question[];
 }>
 
-export let quickQuiz: Store = writable({
+export const quickQuiz: Store = writable({
     totalTime: 0,
     timeRemaining: 0,
     currentUnit: 0,
