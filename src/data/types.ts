@@ -3,6 +3,7 @@ export interface Question {
     image_link?: string;
     passage_header?: string;
     passage?: string;
+    explanation: string;
     answers: string[];
     answer: number;
     unit: number;
