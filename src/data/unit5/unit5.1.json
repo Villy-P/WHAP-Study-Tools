@@ -10,6 +10,7 @@
                 "The development of new mass media technologies such as radio",
                 "The increasing overseas migration of Asians as laborers in European colonies"
             ],
+            "explanation": "Kartini’s familiarity with the ideas regarding social roles that she discusses in her letter is best explained by the spread of Enlightenment thought as empires consolidated control over their territories. Kartini’s letter reflects her awareness of the ideas of the Enlightenment, which emphasized the importance of reason, individualism, and the rights of the individual. These ideas were spread through the European empires that controlled Indonesia, where Kartini lived. The Enlightenment ideas that Kartini was exposed to influenced her thinking about the",
             "answer": 1,
             "unit": 5,
             "subunit": 1,
@@ -21,6 +22,7 @@
             "question": "Which of the following best describes the author’s approach in the first paragraph?",
             "passage_header": "Joaquim Nabuco, Brazilian writer and political activist, Abolitionism, book published 1883",
             "passage": "“We often see articles in our [Brazilian] newspapers trying to convince the reader that slavery among us is a very mild and pleasant condition for the slave—so often, in fact, that one may almost begin to believe that, if slaves were asked, they would prefer slavery to freedom. This only proves that newspaper articles are not written by slaves. . . .The legal position of slaves in Brazil can be summed up in these words: the Constitution does not apply to them. Our [1824] Constitution is full of lofty ideas [such as]: ‘No citizen can be forced to do anything except as required by law;’ ‘The law shall apply equally to every person;’ ‘Whipping, torture, and all other cruel punishments are abolished,’ etc. Yet, in this ostensibly free nation . . . we must have, on a daily basis, judges, police, and, if need be, the army and navy employed to force enslaved men, women, and children to work night and day without any compensation. To admit this in the highest law of the land would reduce the list of Brazilian freedoms to a transparent fraud. For this reason the Constitution does not even mention slaves or attempt to regulate their status.”",
+            "explanation": "The author’s approach in the first paragraph is best described as using sarcasm to highlight the weakness of the proslavery arguments. The author uses sarcasm to criticize the proslavery arguments that are often made in Brazilian newspapers. The author notes that these articles often try to convince readers",
             "answers": [
                 "Relying on statistical data to determine the true conditions of slavery",
                 "Illustrating the damage of slavery by quoting from written slave narratives",
@@ -38,6 +40,7 @@
         },
         {
             "question": "Which of the following claims does Edmund Burke not argue in our reading \"Society is Indeed a Contract\"?",
+            "explanation": "Edmund Burke does not argue there is a contract between men and their ancestors, but instead a contract between fellow men.",
             "answers": [
                 "Human beings have material, scientific, artistic, and moral needs.",
                 "Society is a contract between men, their ancestors, and God, in which the Christian God is society's ultimate guarantee",
@@ -55,6 +58,7 @@
         },
         {
             "question": "Which of the following claims does Mary Wollstonecraft not argue in our reading \"The Mind has no Gender\"?",
+            "explanation": "Mary Wollstonecraft does not argue that women should be taught how they are physically different from men because her argument is relating to mental attributes and that men and women were equal on that standing.",
             "answers": [
                 "Men and Women should be given an equal education",
                 "Women should be treated with equal legal, social, and political rights",
@@ -74,6 +78,7 @@
         },
         {
             "question": "Which of the following claims does Adam Smith not argue in \"A Man is an Animal that Makes Bargains\"",
+            "explanation": "Adam Smith does not argue that the govt. should regulate the use of the assembly in order to avoid harms to the workers, but instead argues that the govt. should not regulate the market and that the market should be free.",
             "answers": [
                 "The govt. should regulate the use of the assembly in order to avoid harms to the workers",
                 "A completely free world market would lead to a perfectly free society",
@@ -91,6 +96,7 @@
         },
         {
             "question": "Which of the following claims does Karl Marx not argue in \"History of Society is the History of Class Struggle\"",
+            "explanation": "Karl Marx does not argue that history is a record of conflict between different races because he did not believe that their was a superior race.",
             "answers": [
                 "There are four major stages in human history: tribal system of common property, ancient communal system of ownership, the feudal system, and the capitalist system.",
                 "Your job/profession in capitalism can determine what your family eats, where they live, who they see as allies, and they see as enemies.",
