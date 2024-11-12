@@ -129,6 +129,7 @@
                     <div class="w-11/12 bg-red-500 rounded-lg text-gray-100">
                         <p class="p-4 pb-1 font-semibold">That's not the right answer. The correct answer is:</p>
                         <p class="p-4 pt-0">{currentQuestion.answers[currentQuestion.answer]}</p>
+                        <p class="p-4 pt-1">Explanation: {currentQuestion.explanation}</p>
                     </div>
                     {#if $quickQuiz.currentQuestion == $quickQuiz.questionCount}
                         <Button href="/diagnostics.html" color="blue" class="float-right mt-4">Finish Quiz</Button>
