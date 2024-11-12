@@ -2,6 +2,7 @@
     "questions": [
         {
             "question": "Russia was slow to do all of the following in he 19th century EXCEPT",
+            "explanation": "Russia was slow to industrialize, but it was not slow to promote economic growth because it did so by supporting entrepreneurs with loans.",
             "answers": [
                 "Support entrepreneurs with loans",
                 "Build roads/transportation networks",
@@ -17,6 +18,7 @@
         },
         {
             "question": "TRUE or False: The Bolsheviks were the first example of communists running a large country.",
+            "explanation": "The Bolsheviks were the first example of communists running a large country, as they took over Russia in 1917.",
             "answers": [
                 "True",
                 "False"
@@ -31,6 +33,7 @@
         },
         {
             "question": "TRUE or FALSE: Sun Yat-sen had a long rule in China",
+            "explanation": "Sun Yat-sen did not have a long rule in China, as he was overthrown by Yuan Shikai.",
             "answers": [
                 "True",
                 "False"
@@ -44,6 +47,7 @@
         },
         {
             "question": "China faced all of the following DOMESTIC concerns in the 19th century EXCEPT",
+            "explanation": "China faced all of the following domestic concerns in the 19th century except for over taxation of citizens, because the government was not taxing citizens enough.",
             "answers": [
                 "Lack of government funds to build",
                 "Over taxation of citizens",
@@ -59,6 +63,7 @@
         },
         {
             "question": "Sun Yat-sen believed in all of the following governing principles EXCEPT",
+            "explanation": "Sun Yat-sen believed in all of the following governing principles except for individual property ownership, because he believed in socialism.",
             "answers": [
                 "Nationalism",
                 "Individual Property Ownership",
@@ -75,6 +80,7 @@
         },
         {
             "question": "Which empire was referred to as \"the sick man of Europe\" due to its struggling exports and agricultural economy?",
+            "explanation": "The Ottoman Empire was referred to as \"the sick man of Europe\" due to its struggling exports and agricultural economy.",
             "answers": [
                 "The Roman Empire",
                 "The Ottoman Empire",
@@ -92,6 +98,7 @@
         },
         {
             "question": "The Ottoman Empire's secret alliance with _________________ led to the dismantling of the Ottoman Empire into smaller independent countries.",
+            "explanation": "The Ottoman Empire's secret alliance with Germany led to the dismantling of the Ottoman Empire into smaller independent countries.",
             "answers": [
                 "Germany",
                 "Britain",
@@ -108,6 +115,7 @@
         },
         {
             "question": "TRUE or FALSE: Porfirio Diaz put Francisco Madero, his competition for president in jail which contributed to the Mexican Revolution.",
+            "explanation": "Porfirio Diaz put Francisco Madero, his competition for president in jail which contributed to the Mexican Revolution.",
             "answers": [
                 "True",
                 "False"

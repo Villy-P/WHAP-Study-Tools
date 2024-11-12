@@ -19,6 +19,10 @@
                         "type": "string",
                         "markdownDescription": "A passage that gives more context to the question. (Optional)"
                     },
+                    "explanation": {
+                        "type": "string",
+                        "markdownDescription": "Explanation of why the answer is correct"
+                    },
                     "answers": {
                         "type": "array",
                         "minItems": 2,
