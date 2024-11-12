@@ -41,6 +41,9 @@
             <div class="w-full flex flex-col gap-2 p-2">
                 <Button color="dark">{item.answers[item.answer]}</Button>
             </div>
+            <div class="w-full flex flex-col gap-2 p-2">
+                <p>Explanation: {item.explanation}</p>
+            </div>
         </div>
     </div>
 </AccordionItem>
