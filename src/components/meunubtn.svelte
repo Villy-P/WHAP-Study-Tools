@@ -3,9 +3,13 @@
     import { Button, Card } from "flowbite-svelte";
     import { ArrowRightOutline } from "flowbite-svelte-icons";
 
-    export let title: string;
-    export let go: string;
-    export let backgroundImage: string;
+    interface Props {
+        title: string;
+        go: string;
+        backgroundImage: string;
+    }
+
+    let { title, go, backgroundImage }: Props = $props();
 </script>
 
 <Card img={backgroundImage} horizontal size="md" class="w-fit">

@@ -1,15 +1,21 @@
 <script lang="ts">
-  import { AccordionItem, Badge, Button, Heading, P } from "flowbite-svelte";
-    import type { Question } from "../data/types";
+    import { AccordionItem, Badge, Button, Heading, P } from "flowbite-svelte";
+        import type { Question } from "../data/types";
 
-    export let unit: number;
-    export let item: Question;
+    interface Props {
+        unit: number;
+        item: Question;
+    }
 
-    let collapsed: HTMLDivElement;
+    let { unit, item }: Props = $props();
+
+    let collapsed: HTMLDivElement | undefined = $state(undefined);
 </script>
 
 <AccordionItem>
-    <span slot="header">#{ unit } --- Unit { item.unit }.{ item.subunit }</span>
+    {#snippet header()}
+        <span >#{ unit } --- Unit { item.unit }.{ item.subunit }</span>
+    {/snippet}
     <div class="h-fit overflow-hidden w-full flex" bind:this={collapsed}>
         <div class="w-1/2 flex flex-col border-r-2 border-gray-500">
             <Heading tag="h6">Question:</Heading>
