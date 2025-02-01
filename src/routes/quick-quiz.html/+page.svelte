@@ -5,6 +5,7 @@
     import '../../app.css'
     import { onMount } from 'svelte';
     import { Heading } from 'flowbite-svelte';
+	import SEO from '../../components/SEO.svelte';
 
     onMount(() => {
         localStorage.clear();
@@ -18,3 +19,5 @@
     <MenuButton title="By Topic" go="by-topic.html" backgroundImage="./assets/btn-bg/quick-quiz/bytopic.jpg"/>
     <!-- <MenuButton title="Custom"   go="custom.html"   backgroundImage="./assets/btn-bg/quick-quiz/custom.jpg"/> -->
 </div>
+
+<SEO title="Quick Quizzes" description="Take a quick quiz by unit or by topic. You can also customize your quiz to your liking."/>
