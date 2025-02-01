@@ -6,8 +6,8 @@
     import type { Question } from '../../data/types';
     import '../../app.css'
     import { shuffleArray } from '../../utilities/random';
-    import { writable } from 'svelte/store';
     import { Button, Heading, P } from 'flowbite-svelte';
+	import SEO from '../../components/SEO.svelte';
 
     onMount(() => {
         const s = getStore();
@@ -143,3 +143,5 @@
         {/if}
     </div>
 </div>
+
+<SEO title="Quick Quiz" description="Answer questions quickly and efficiently. Get your results at the end of the quiz."/>

@@ -6,6 +6,7 @@
     import Diagnostic from '../../components/diagnostic.svelte';
     import { Card, Button, Heading, Accordion } from 'flowbite-svelte';
     import { ArrowRightOutline } from 'flowbite-svelte-icons';
+	import SEO from '../../components/SEO.svelte';
 
     function getAccuracy() {
         const right = $quickQuiz.right.length;
@@ -73,3 +74,5 @@
         <br>
     </div>
 </div>
+
+<SEO title="Diagnostics" description="Check your answers and see what you got right and wrong."></SEO>

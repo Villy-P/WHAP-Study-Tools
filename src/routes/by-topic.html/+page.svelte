@@ -9,6 +9,8 @@
     import { onMount } from 'svelte';
     import { quickQuiz } from '$lib/stores/QuickQuizStore';
 
+    import SEO from '../../components/SEO.svelte';
+
     onMount(() => {
         localStorage.clear();
     });
@@ -21,3 +23,5 @@
         <MenuButton title={topic.name.replaceAll("-", " ")} go="start-quiz.html" backgroundImage={topic.image}/>
     {/each}
 </div>
+
+<SEO title="By Topic" description="Take a quiz by topic. You can choose from the list of topics and take a quiz on the selected topic."/>
