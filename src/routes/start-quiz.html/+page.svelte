@@ -5,6 +5,7 @@
     import { onMount } from 'svelte';
     import { Button, Card, Label, Range } from 'flowbite-svelte';
     import { ArrowRightOutline } from 'flowbite-svelte-icons';
+	import SEO from '../../components/SEO.svelte';
 
     const units = getQuestionTypeOfUnit($quickQuiz.currentUnit);
     const topics = getQuestionTypeOfTopic($quickQuiz.currentTopic);
@@ -53,3 +54,5 @@
         </Button>
     </Card>
 </div>
+
+<SEO title="Start Quiz" description="Start a quiz with the options you choose --- Pick your question count and the time limit you wish to set for yourself."/>
