@@ -122,7 +122,7 @@
             {/if}
             <div class="flex w-full justify-center items-center flex-col">
                 {#if correct == 1}
-                <div class="w-11/12 bg-green-500 rounded-lg text-gray-100">
+                <div class="w-11/12 bg-green-500 rounded-lg text-gray-100 mb-4">
                     <p class="p-4 font-semibold">That's the correct answer! Good job</p>
                 </div>
                 <Button on:click={(e) => getNewQuestion()} color="blue">Next Question</Button>
@@ -133,8 +133,8 @@
                         <p class="p-4 pt-0">{currentQuestion.answers[currentQuestion.answer]}</p>
                         <p class="p-4 pt-1">Explanation: {currentQuestion.explanation}</p>
                     </div>
-                    {#if $quickQuiz.currentQuestion == $quickQuiz.questionCount}
-                        <Button href="/diagnostics.html" color="blue" class="float-right mt-4">Finish Quiz</Button>
+                    {#if $quickQuiz.currentQuestion >= $quickQuiz.questionCount}
+                        <Button on:click={() => clearInterval(interval)} href="/diagnostics.html" color="blue" class="float-right mt-4">Finish Quiz</Button>
                     {:else}
                         <Button on:click={(e) => getNewQuestion()} color="blue" class="float-right mt-4">Next Question</Button>
                     {/if}
