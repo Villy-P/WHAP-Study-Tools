@@ -12,8 +12,8 @@
 
     let questionCount: number = $state(Math.floor(
         $quickQuiz.byUnit
-            ? units / 2
-            : topics / 2));
+            ? Math.ceil(units / 2)
+            : Math.ceil(topics / 2)));
     let minutes: number = $state(20);
 
     function startQuiz() {
