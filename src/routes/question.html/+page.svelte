@@ -20,8 +20,8 @@
         getNewQuestion();
     });
 
-    let questionWrapper: HTMLDivElement;
-    let selectedAnswer = -1;
+    let questionWrapper: HTMLDivElement | undefined = $state(undefined);
+    let selectedAnswer = $state(-1);
     let validQuestions = JSON.parse(JSON.stringify(questions));
 
     function saveStore(store: any) {
@@ -52,7 +52,7 @@
     }
 
     function clickAnswer(answer: EventTarget | null, index: number) {
-        if (answer == null)
+        if (answer == null || !questionWrapper)
             return;
         for (const question of questionWrapper.children)
             question.classList.remove("bg-slate-200");
@@ -61,9 +61,9 @@
         selectedAnswer = index;
     }
 
-    let currentQuestion: Question;
-    let correct = 0;
-    let interval = 0;
+    let currentQuestion: Question | undefined = $state(undefined);
+    let correct = $state(0);
+    let interval = $state(0);
 
     function getNewQuestion() {            
         currentQuestion = validQuestions.shift() as Question;
@@ -81,6 +81,8 @@
     }
 
     function checkAnswer() {
+        if (!currentQuestion)
+            return;
         correct = currentQuestion?.answer == selectedAnswer ? 1 : 2;
         if (correct == 1) 
             $quickQuiz.right.push(currentQuestion);

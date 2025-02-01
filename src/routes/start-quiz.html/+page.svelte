@@ -9,11 +9,11 @@
     const units = getQuestionTypeOfUnit($quickQuiz.currentUnit);
     const topics = getQuestionTypeOfTopic($quickQuiz.currentTopic);
 
-    let questionCount: number = Math.floor(
+    let questionCount: number = $state(Math.floor(
         $quickQuiz.byUnit
             ? units / 2
-            : topics / 2);
-    let minutes: number = 20;
+            : topics / 2));
+    let minutes: number = $state(20);
 
     function startQuiz() {
         $quickQuiz.totalTime = minutes * 60;
