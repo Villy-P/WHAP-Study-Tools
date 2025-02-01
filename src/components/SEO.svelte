@@ -1,7 +1,7 @@
 <script lang="ts">
     import { page } from '$app/stores';
 
-    const websiteName = "https://www.valerius-petrini.vercel.app";
+    const websiteName = "https://www.whap-study-tools.vercel.app";
   
     interface Props {
         title?: string;
