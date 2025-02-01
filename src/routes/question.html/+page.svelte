@@ -95,8 +95,8 @@
 <div class="flex w-full border-b-2 border-gray-600 h-12 items-center">
     <Button href='/' color="blue" on:click={() => clearInterval(interval)}>Exit</Button>
     <div class="flex ml-auto gap-3">
-        <Heading tag="h6">{$quickQuiz.currentQuestion} / {$quickQuiz.questionCount}</Heading>
-        <Heading tag="h6" class="pr-4">{formatTime($quickQuiz.timeRemaining)}</Heading>
+        <Heading tag="h6" class="w-fit">{$quickQuiz.currentQuestion} / {$quickQuiz.questionCount}</Heading>
+        <Heading tag="h6" class="pr-4 w-fit">{formatTime($quickQuiz.timeRemaining)}</Heading>
     </div>
 </div>
 <div class="w-full flex items-center flex-col gap-1 pt-10 pb-5">
