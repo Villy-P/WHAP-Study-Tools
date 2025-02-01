@@ -9,6 +9,8 @@
     import { onMount } from 'svelte';
     import { Heading } from 'flowbite-svelte';
 
+    import SEO from '../../components/SEO.svelte';
+
     onMount(() => {
         localStorage.clear();
     });
@@ -27,3 +29,5 @@
         <CollapsableButton title={`Unit ${i + 1} - ${unit.name}`} desc={unit.desc} go="/start-quiz.html" backgroundImage={unit.bgpath} unit={i + 1} count={getQuestionTypeOfUnit(i + 1)}/>
     {/each}
 </div>
+
+<SEO title="By Unit" description="Take a quiz by unit. You can choose from the list of units and take a quiz on the selected unit."/>
